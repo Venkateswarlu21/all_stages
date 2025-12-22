@@ -38,6 +38,6 @@ pipeline:
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: docker_hub_477
-                    repo: Venkateswarlu21/venky_harness
+                    repo: venkatesh21/venky_harness
                     tags:
                       - v1
