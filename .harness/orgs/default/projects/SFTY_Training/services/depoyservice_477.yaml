@@ -1,0 +1,26 @@
+service:
+  name: depoy-service_477
+  identifier: depoyservice_477
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: manifest_477
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: github_477
+                  gitFetchType: Branch
+                  paths:
+                    - deployment.yml
+                  repoName: all_stages
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              optionalValuesYaml: false
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
