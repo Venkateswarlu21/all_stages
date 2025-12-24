@@ -1,0 +1,48 @@
+pipeline:
+  name: cd_new_demo
+  identifier: cd_new_demo
+  projectIdentifier: SFTY_Training
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cd_deploy
+        identifier: cd_deploy
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: depoyservice_477
+            gitBranch: main
+          environment:
+            environmentRef: dev_477_demo
+            gitBranch: main
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: new_infra_demo
+          execution:
+            steps:
+              - step:
+                  type: K8sRollingDeploy
+                  name: K8sRollingDeploy_1
+                  identifier: K8sRollingDeploy_1
+                  spec:
+                    skipDryRun: false
+                    pruningEnabled: false
+                  timeout: 10m
+            rollbackSteps: []
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: MarkAsFailure
+  properties:
+    ci:
+      codebase:
+        connectorRef: github_477
+        repoName: all_stages
+        build: <+input>
+        sparseCheckout: []
