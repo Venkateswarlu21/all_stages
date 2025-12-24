@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: my_infra_477
+  identifier: my_infra_477
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
+  environmentRef: dev_477
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: kubernetesdelegate_477
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
