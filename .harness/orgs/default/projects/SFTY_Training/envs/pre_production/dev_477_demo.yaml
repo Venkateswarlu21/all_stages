@@ -1,0 +1,8 @@
+environment:
+  name: dev_477_demo
+  identifier: dev_477_demo
+  description: ""
+  tags: {}
+  type: PreProduction
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
