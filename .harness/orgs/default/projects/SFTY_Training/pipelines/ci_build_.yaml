@@ -39,7 +39,7 @@ pipeline:
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: bluegreen
-                    repo: tejasri7/venky_harness
+                    repo: tejasri7/blue-green
                     tags:
                       - v1.1
           buildIntelligence:
