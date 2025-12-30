@@ -50,6 +50,8 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+        delegateSelectors:
+          - jlopez-kubernetes-delegate
   properties:
     ci:
       codebase:
