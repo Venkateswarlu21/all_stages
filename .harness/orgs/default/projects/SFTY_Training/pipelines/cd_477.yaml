@@ -29,6 +29,12 @@ pipeline:
                   spec:
                     skipDryRun: false
                     pruningEnabled: false
+                  failureStrategies:
+                    - onFailure:
+                        errors:
+                          - AllErrors
+                        action:
+                          type: StageRollback
             rollbackSteps:
               - step:
                   name: Rollback Rollout Deployment
