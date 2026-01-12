@@ -34,11 +34,13 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: BuildAndPushDockerRegistry
-                  name: BuildAndPushDockerRegistry_1
-                  identifier: BuildAndPushDockerRegistry_1
+                  type: BuildAndPushGAR
+                  name: BuildAndPushGAR_1
+                  identifier: BuildAndPushGAR_1
                   spec:
-                    connectorRef: docker_hub_477
-                    repo: venkatesh21/venky_harness
+                    connectorRef: gcp477
+                    host: us-docker.pkg.dev
+                    projectID: project-cb80b961-01f1-443f-bfb
+                    imageName: Venkatesh21:image1
                     tags:
-                      - "1.11"
+                      - "1.1"
