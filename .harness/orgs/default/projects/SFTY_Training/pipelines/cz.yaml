@@ -39,8 +39,8 @@ pipeline:
                   identifier: BuildAndPushGAR_1
                   spec:
                     connectorRef: gcp477
-                    host: us-docker.pkg.dev
+                    host: us-central1-docker.pkg.dev
                     projectID: project-cb80b961-01f1-443f-bfb
-                    imageName: Venkatesh21:image1
+                    imageName: demo-repo/venky1
                     tags:
                       - "1.1"
