@@ -86,6 +86,6 @@ pipeline:
     ci:
       codebase:
         connectorRef: github_477
-        repoName: all_stages
+        repoName: ci_cd
         build: <+input>
         sparseCheckout: []
