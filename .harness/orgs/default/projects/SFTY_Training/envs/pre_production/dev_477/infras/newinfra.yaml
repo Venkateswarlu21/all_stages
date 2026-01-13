@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: 477-new-infra
+  identifier: newinfra
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
+  environmentRef: dev_477
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: k8s477
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
