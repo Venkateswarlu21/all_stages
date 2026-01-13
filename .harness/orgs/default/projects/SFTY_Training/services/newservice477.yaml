@@ -1,0 +1,5 @@
+service:
+  name: new-service-477
+  identifier: newservice477
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
