@@ -3,3 +3,23 @@ service:
   identifier: newservice477
   orgIdentifier: default
   projectIdentifier: SFTY_Training
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: deployment
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: github_477
+                  gitFetchType: Branch
+                  paths:
+                    - deployment.yml
+                  repoName: all_stages
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              optionalValuesYaml: false
+    type: Kubernetes
