@@ -38,7 +38,7 @@ pipeline:
                   type: IACMTerraformPlugin
                   name: apply
                   identifier: apply
-                  timeout: 10m
+                  timeout: 20m
                   spec:
                     command: apply
               - step:
@@ -49,3 +49,10 @@ pipeline:
                     command: destroy
                   timeout: 1h
         tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: github_477
+        repoName: all_stages
+        build: <+input>
+        sparseCheckout: []
