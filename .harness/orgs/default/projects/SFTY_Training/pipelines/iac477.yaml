@@ -34,9 +34,7 @@ pipeline:
                     connectorRef: docker_hub_477
                     image: maven:3.9-eclipse-temurin-21
                     shell: Sh
-                    command: |-
-                      mvn clean package -DskipTests -Dcheckstyle.skip=true
-                      mvn clean package
+                    command: mvn clean package
   properties:
     ci:
       codebase:
