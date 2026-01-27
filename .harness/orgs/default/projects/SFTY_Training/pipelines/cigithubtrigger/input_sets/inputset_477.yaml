@@ -1,0 +1,14 @@
+inputSet:
+  name: inputset_477
+  identifier: inputset_477
+  orgIdentifier: default
+  projectIdentifier: SFTY_Training
+  pipeline:
+    identifier: cigithubtrigger
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
