@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: venkatesh21/venky_harness:v1
+        image: venkatesh21/infrion
         ports:
         - containerPort: 8080
 
